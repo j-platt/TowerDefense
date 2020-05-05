@@ -6,12 +6,20 @@
 
 namespace tower_defense
 {
-	constexpr unsigned board_x_dimension = 100;
-	constexpr unsigned board_y_dimension = 100;
+	constexpr unsigned boardXDimension = 100;
+	constexpr unsigned boardYDimension = 100;
+	
+	struct board_coordinate
+	{
+		unsigned x;
+		unsigned y;
+
+		board_coordinate(unsigned const x, unsigned const y);
+	};
 
 	struct board
 	{
-		std::array<std::array<tile, board_y_dimension>, board_x_dimension> tiles;
+		std::array<std::array<tile, boardYDimension>, boardXDimension> tiles;
 	};
 }
 
