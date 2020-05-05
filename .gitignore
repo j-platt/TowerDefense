@@ -30,3 +30,17 @@
 *.exe
 *.out
 *.app
+
+# MSVC
+*.ipch
+*.VC.db
+*.VC.opendb
+*.pdb
+*.tlog
+*.ilk
+*lastbuildstate
+*.idb
+*.iobj
+*.ipdb
+*.log
+*.suo
