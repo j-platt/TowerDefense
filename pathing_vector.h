@@ -1,5 +1,7 @@
 #pragma once
 
+#include <iostream>
+
 namespace directions
 {
 	enum direction
@@ -12,15 +14,19 @@ namespace directions
 		southwest,
 		west,
 		northwest,
+		goal,
+		unset,
 	};
 }
-using namespace directions;
+using directions::direction;
+
+std::ostream& operator<<(std::ostream& output, direction const& input);
 
 namespace tower_defense
 {
 	struct pathing_vector
 	{
-		unsigned magnitude;
-		direction facing;
+		unsigned magnitude = 0;
+		direction facing = directions::unset;
 	};
 }

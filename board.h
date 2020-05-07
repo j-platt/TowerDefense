@@ -3,6 +3,7 @@
 #include "tile.h"
 
 #include <array>
+#include <memory>
 
 namespace tower_defense
 {
@@ -21,5 +22,5 @@ namespace tower_defense
 	{
 		std::array<std::array<tile, boardYDimension>, boardXDimension> tiles;
 	};
+	using board_ptr = std::unique_ptr<board>;
 }
-
